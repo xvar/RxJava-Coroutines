@@ -20,6 +20,7 @@ allprojects {
 
 subprojects {
     afterEvaluate { project ->
+        //android libraries
         if (project.hasProperty('android')) {
             android {
                 sourceSets.all {
@@ -28,7 +29,6 @@ subprojects {
                 compileSdkVersion config.compileSdk
 
                 defaultConfig {
-                    applicationId config.appId
                     minSdkVersion config.minSdk
                     targetSdkVersion config.targetSdk
                     versionCode config.versionCode
@@ -36,6 +36,13 @@ subprojects {
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
                     resValue "string", "applicationLabel", config.projectName
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled true
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                    }
                 }
 
                 compileOptions {
@@ -46,6 +53,14 @@ subprojects {
                 kotlinOptions {
                     jvmTarget = config.jvmTarget
                 }
+            }
+        }
+
+        //kotlin/java libraries
+        if (project.plugins.hasPlugin('java-library')) {
+            java {
+                sourceCompatibility = config.java
+                targetCompatibility = config.java
             }
         }
     }
