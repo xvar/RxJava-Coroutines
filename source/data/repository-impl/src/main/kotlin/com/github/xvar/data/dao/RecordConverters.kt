@@ -1,9 +1,9 @@
 package com.github.xvar.data.dao
 
 import androidx.room.TypeConverter
-import com.github.xvar.data.model.Case
-import com.github.xvar.data.model.Executor
-import com.github.xvar.data.model.Technology
+import com.github.xvar.domain.model.Case
+import com.github.xvar.domain.model.Executor
+import com.github.xvar.domain.model.Technology
 
 internal class RecordConverters {
 

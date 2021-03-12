@@ -1,6 +1,6 @@
 ext {
     config = [
-            kotlin: '1.4.21',
+            kotlin: '1.4.31',
             java: JavaVersion.VERSION_1_8,
             jvmTarget: '1.8',
             compileSdk: 30,
@@ -15,7 +15,7 @@ ext {
             room: '2.2.6'
     ]
     gradlePlugin = [
-            android: 'com.android.tools.build:gradle:7.0.0-alpha05',
+            android: 'com.android.tools.build:gradle:7.0.0-alpha09',
             kotlin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${config.kotlin}"
     ]
     library = [

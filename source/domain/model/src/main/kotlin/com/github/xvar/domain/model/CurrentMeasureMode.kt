@@ -1,4 +1,4 @@
-package com.github.xvar.data.model
+package com.github.xvar.domain.model
 
 class CurrentMeasureMode(
     val technology: Technology,

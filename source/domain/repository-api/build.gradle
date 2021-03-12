@@ -5,5 +5,5 @@ plugins {
 }
 
 dependencies {
-    implementation project(':source:data:model')
+    implementation project(':source:domain:model')
 }

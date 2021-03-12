@@ -1,4 +1,4 @@
-package com.github.xvar.data.model
+package com.github.xvar.domain.model
 
 enum class Technology {
     RXJAVA2,
