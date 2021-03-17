@@ -1,7 +1,7 @@
 package com.github.xvar.data.dao
 
 import androidx.room.TypeConverter
-import com.github.xvar.domain.model.Case
+import com.github.xvar.domain.model.Task
 import com.github.xvar.domain.model.Executor
 import com.github.xvar.domain.model.Technology
 
@@ -13,22 +13,22 @@ internal class RecordConverters {
     }
 
     @TypeConverter
-    fun fromCase(case: Case?) : String? {
-        return when(case) {
+    fun fromCase(task: Task?) : String? {
+        return when(task) {
             null -> null
-            Case.FILE_READ -> CaseTag.file
-            Case.NETWORK -> CaseTag.network
+            Task.FILE_READ -> CaseTag.file
+            Task.NETWORK -> CaseTag.network
             else -> CaseTag.file
         }
     }
 
     @TypeConverter
-    fun toCase(value: String?) : Case? {
+    fun toCase(value: String?) : Task? {
         return when(value) {
             null -> null
-            CaseTag.file -> Case.FILE_READ
-            CaseTag.network -> Case.NETWORK
-            else -> Case.FILE_READ
+            CaseTag.file -> Task.FILE_READ
+            CaseTag.network -> Task.NETWORK
+            else -> Task.FILE_READ
         }
     }
 

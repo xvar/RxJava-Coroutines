@@ -1,6 +1,6 @@
 package com.github.xvar.domain.model
 
-enum class Case {
+enum class Task {
     FILE_READ,
     NETWORK
 }

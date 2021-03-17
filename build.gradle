@@ -28,20 +28,39 @@ subprojects {
                 }
                 compileSdkVersion config.compileSdk
 
+                signingConfigs {
+                    ydb {
+                        keyAlias 'androiddebugkey'
+                        keyPassword 'android'
+                        storeFile file('source/debug.keystore')
+                        storePassword 'android'
+                    }
+                }
+
                 defaultConfig {
                     minSdkVersion config.minSdk
                     targetSdkVersion config.targetSdk
                     versionCode config.versionCode
                     versionName config.versionName
+                    signingConfig signingConfigs.ydb
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
                     resValue "string", "applicationLabel", config.projectName
+
+                    javaCompileOptions {
+                        annotationProcessorOptions {
+                            arguments += ["room.schemaLocation": "$projectDir/room_schemas".toString()]
+                        }
+                    }
                 }
 
                 buildTypes {
                     release {
                         minifyEnabled true
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                    }
+                    debug {
+                        debuggable true
                     }
                 }
 

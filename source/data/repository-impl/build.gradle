@@ -7,5 +7,17 @@ plugins {
 dependencies {
     implementation project(':source:domain:model')
     implementation library.androidx.room.runtime
+    implementation library.rxjava.rxjava3
+    implementation library.androidx.room.rxjava3
     kapt library.androidx.room.compiler
+
+    testImplementation library.test.junit
+    androidTestImplementation library.test.androidx.junit
+    androidTestImplementation library.test.androidx.runner
+    androidTestImplementation library.test.androidx.espresso
+    androidTestImplementation library.androidx.room.test
+    androidTestImplementation library.test.androidx.core_test
 }
+
+
+
