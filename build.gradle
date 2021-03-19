@@ -72,6 +72,15 @@ subprojects {
                 kotlinOptions {
                     jvmTarget = config.jvmTarget
                 }
+
+                buildFeatures {
+                    // Enables Jetpack Compose for this module
+                    compose true
+                }
+
+                composeOptions {
+                    kotlinCompilerExtensionVersion config.compose
+                }
             }
         }
 

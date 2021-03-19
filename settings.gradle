@@ -1,6 +1,7 @@
 apply from: 'dependencies.gradle'
 rootProject.name = config.projectName
 include ':source:app'
-include ':source:data:repository-impl'
-include ':source:domain:model'
-include ':source:domain:repository-api'
+include ':source:feature:measure:data:repository-impl'
+include ':source:feature:measure:domain:model'
+include ':source:feature:measure:domain:repository-api'
+include ':source:feature:measure:presentation'

@@ -1,4 +1,8 @@
 ext {
+    version = [
+            room: '2.3.0-beta02',
+            compose: '1.0.0-beta02'
+    ]
     config = [
             kotlin: '1.4.31',
             java: JavaVersion.VERSION_1_8,
@@ -9,10 +13,8 @@ ext {
             versionCode: 1,
             versionName: '1.0',
             projectName: 'RxJava-Coroutines',
-            appId: 'com.github.xvar.rxvsc'
-    ]
-    version = [
-            room: '2.3.0-beta02'
+            appId: 'com.github.xvar.rxvsc',
+            compose: "${version.compose}"
     ]
     gradlePlugin = [
             android: 'com.android.tools.build:gradle:7.0.0-alpha10',
@@ -20,7 +22,36 @@ ext {
     ]
     library = [
             kotlin: "org.jetbrains.kotlin:kotlin-stdlib:${config.kotlin}",
+            javax: [
+                    inject: "javax.inject:javax.inject:1",
+            ],
+            compose: [
+                    ui: "androidx.compose.ui:ui:${version.compose}",
+                    // Tooling support (Previews, etc.)
+                    tooling: "androidx.compose.ui:ui-tooling:${version.compose}",
+                    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+                    foundation: "androidx.compose.foundation:foundation:${version.compose}",
+                    // Material Design
+                    material: "androidx.compose.material:material:${version.compose}",
+                    // Material design icons
+                    icons_core: "androidx.compose.material:material-icons-core:${version.compose}",
+                    icons_extended: "androidx.compose.material:material-icons-extended:${version.compose}",
+                    // Integration with activities
+                    //activity: "androidx.activity:activity-compose:1.3.0-alpha03",
+                    activity: "androidx.activity:activity-compose:${version.compose}",
+                    // Integration with ViewModels
+                    //viewmodel: "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha02",
+                    viewmodel: "androidx.lifecycle:lifecycle-viewmodel-compose:${version.compose}",
+                    // Integration with observables
+                    //implementation 'androidx.compose.runtime:runtime-livedata:1.0.0-beta01'
+                    runtime: "androidx.compose.runtime:${version.compose}",
+                    animation: "androidx.compose.animation:animation:${version.compose}",
+
+                    // UI Tests
+                    test: "androidx.compose.ui:ui-test-junit4:${version.compose}"
+            ],
             androidx: [
+                    annotation : 'androidx.annotation:annotation:1.0.0',
                     core_ktx: 'androidx.core:core-ktx:1.3.1',
                     room: [
                             runtime: "androidx.room:room-runtime:${version.room}",
