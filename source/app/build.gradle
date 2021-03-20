@@ -17,5 +17,5 @@ android {
 
 dependencies {
     implementation library.kotlin
-    implementation library.google.material
+    implementation project(":source:feature:measure:presentation")
 }

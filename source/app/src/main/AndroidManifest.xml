@@ -8,7 +8,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/applicationLabel"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Project" />
+        android:theme="@style/Theme.RxJavaCoroutines.NoActionBar"
+        android:supportsRtl="true" />
 
 </manifest>

@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="Theme.RxJavaCoroutines.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <style name="Theme.RxJavaCoroutines.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="Theme.RxJavaCoroutines.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+</resources>
