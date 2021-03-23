@@ -16,7 +16,7 @@ android {
 dependencies {
     implementation library.kotlin
     implementation library.androidx.compose.tooling
-    //implementation library.androidx.compose.ui
+    implementation library.androidx.compose.ui
     //implementation library.androidx.compose.compiler
     //implementation library.androidx.compose.foundation
     implementation library.androidx.compose.activity

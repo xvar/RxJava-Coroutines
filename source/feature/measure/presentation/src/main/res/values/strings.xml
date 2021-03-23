@@ -1,3 +1,7 @@
 <resources>
     <string name="title_activity_main">MainActivity</string>
+    <string name="rx_java2">RxJava2</string>
+    <string name="rx_java3">RxJava3</string>
+    <string name="coroutines">Coroutines</string>
+    <string name="flow">Flow</string>
 </resources>

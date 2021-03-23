@@ -9,23 +9,32 @@ import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
+    onPrimary = Color.Black,
     primaryVariant = Purple700,
+
     secondary = Teal200,
+    onSecondary = Color.White,
+
+    background = Color.Black,
+    onBackground = Color.White,
+
+    surface = Color.Black,
+    onSurface = Color.White,
 )
 
 private val LightColorPalette = lightColors(
     primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200,
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
     onPrimary = Color.White,
+    primaryVariant = Purple700,
+
+    secondary = Teal200,
     onSecondary = Color.Black,
+
+    background = Color.White,
     onBackground = Color.Black,
+
+    surface = Color.White,
     onSurface = Color.Black,
-    */
 )
 
 @Composable
@@ -45,4 +54,11 @@ fun RxJavaCoroutinesTheme(
         shapes = Shapes,
         content = content
     )
+}
+
+@Composable
+fun AppTheme(content: @Composable () -> Unit) {
+    RxJavaCoroutinesTheme {
+        content()
+    }
 }
